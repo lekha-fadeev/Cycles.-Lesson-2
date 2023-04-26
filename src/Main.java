@@ -40,11 +40,11 @@ public class Main {
 
     public static void task3() {
         System.out.println("Задача 3");
-        int population = 12_000_000;
-        int birthRate = 17 * (population / 1000);
-        int mortality = 8 * (population / 1000);
+        int population = 12_000_000;;
         int year = 0;
         while (year < 10) {
+            int birthRate = 17 * (population / 1000);
+            int mortality = 8 * (population / 1000);
             population = population + birthRate - mortality;
             year = year + 1;
             System.out.println("Год " + year + " численность населения составляет " + population);
@@ -94,13 +94,11 @@ public class Main {
 
     public static void task7() {
         System.out.println("Задача 7");
-        int month = 1;
-        int Friday = 0;
+        int Friday = 5;
         int d = 0;
         while (d <= 31) {
-            Friday = month + d;
             d = d + 1;
-            if (Friday % 5 == 0) {
+            if (d % Friday == 0) {
                 System.out.println("Сегодня пятница, " + d + "-е число. Необходимо подготовить отчет");
             }
         }
@@ -112,7 +110,7 @@ public class Main {
         int future = real + 100;
         int d = 0;
         while (d <= future) {
-            d = 79 * ((d / 79) + 1);
+            d += 79;;
             if (d > thePast && d < future) {
                 System.out.println(d);
                 }
