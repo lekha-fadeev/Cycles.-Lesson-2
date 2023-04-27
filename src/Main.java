@@ -91,16 +91,15 @@ public class Main {
             }
         }
     }
-
     public static void task7() {
         System.out.println("Задача 7");
-        int Friday = 5;
-        int d = 0;
+        int Friday = 3;
+        int d = Friday;
         while (d <= 31) {
-            d = d + 1;
-            if (d % Friday == 0) {
+            if (d >= Friday) {
                 System.out.println("Сегодня пятница, " + d + "-е число. Необходимо подготовить отчет");
             }
+            d += 7;
         }
     }
     public static void task8() {
